@@ -1,4 +1,4 @@
-¡Ú±âÁ¸ Å×ÀÌºí »èÁ¦
+â˜…ê¸°ì¡´ í…Œì´ë¸” ì‚­ì œ
 
 alter table tbl_reply drop constraint fk_reply_board;
 
@@ -12,7 +12,7 @@ drop table tbl_board;
 
 
 
-¡ÚÅ×ÀÌºí »ı¼º
+â˜…í…Œì´ë¸” ìƒì„±
 
 
 DROP TABLE IF EXISTS Member;
@@ -119,3 +119,7 @@ BNO
 REFERENCES TBL_BOARD (
 BNO
 ); 
+
+2020.02.06 ì¶”ê°€
+
+alter table Member add(pass varchar2(20));
