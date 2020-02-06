@@ -13,5 +13,6 @@ public class MemberVO {
 	private Long telNum;
 	private String eMail;
 	private Date aDate;
+	private String pass;
 
 }
