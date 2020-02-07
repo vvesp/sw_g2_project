@@ -123,3 +123,16 @@ BNO
 2020.02.06 추가
 
 alter table Member add(pass varchar2(20));
+
+
+
+2020.02.07 추가/시퀀스 생성
+create sequence seq_board
+start with 1
+increment by 1
+nocycle;
+
+create sequence seq_mid
+start with 1
+increment by 1
+nocycle;
