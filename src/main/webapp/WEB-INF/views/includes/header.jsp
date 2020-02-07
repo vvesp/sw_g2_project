@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Home</title>
 <link href="/resources/css/header.css" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
 </head>
@@ -42,7 +42,7 @@
   <div class="container h-100">
     <div class="row h-100 align-items-center">
       <div class="col-12 text-center">
-        <h1 class="font-weight-light">Vertically Centered Masthead Content</h1>
+        <h1 class="font-weight-light">Header TEST~!!</h1>
         <p class="lead">A great starter layout for a landing page</p>
       </div>
     </div>
