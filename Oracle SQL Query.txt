@@ -136,3 +136,26 @@ create sequence seq_mid
 start with 1
 increment by 1
 nocycle;
+
+
+2020.02.13 
+
+
+★기존 테이블 삭제
+
+drop table member;
+
+
+★테이블 생성
+
+CREATE TABLE Member (
+MID NUMBER(10) NOT NULL,
+UID VARCHAR2(20) NOT NULL,
+PASS VARCHAR2(20) NOT NULL,
+MName VACHAR2(18) NOT NULL,
+SNUM NUMBER(13) NOT NULL,
+Adre VARCHAR2(50) NULL,
+TelNum NUMBER(15) NULL,
+EMail VARCHAR2(20) NULL,
+ADATE DATE NULL
+);
