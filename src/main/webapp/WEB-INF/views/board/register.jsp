@@ -73,7 +73,7 @@
 					</div>              
 					<div class="form-group">
 						<label>Text Area</label> 
-						<textarea class="form-control" rows="5" name='content'></textarea>
+						<textarea class="form-control" rows="10" name='content'></textarea>
 					</div>              
 					<div class="form-group">
 						<label>Writer</label> <input class="form-control" name='writer'>

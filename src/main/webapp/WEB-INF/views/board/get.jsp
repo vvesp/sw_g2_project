@@ -178,7 +178,7 @@ $(document).ready(function(){
 			               readonly>
 			            </div>
 			            <div class="form-group">
-			              <label>Text Area</label> <textarea class="form-control" rows="3" name="content" readonly><c:out value= "${board.content}"/></textarea> 
+			              <label>Text Area</label> <textarea class="form-control" rows="10" name="content" readonly><c:out value= "${board.content}"/></textarea> 
 			            </div>
 			            <div class="form-group">
 			              <label>Writer</label> <input class="form-control" name="writer" value='<c:out value= "${board.writer}"/>'
