@@ -58,7 +58,7 @@
 			               
 			            </div>
 			            <div class="form-group">
-			              <label>Text Area</label> <textarea class="form-control" rows="10" name="content" ><c:out value= "${board.content}"/></textarea> 
+			              <label>Text Area</label> <textarea class="form-control" rows="3" name="content" ><c:out value= "${board.content}"/></textarea> 
 			            </div>
 			            <div class="form-group">
 			              <label>Writer</label> <input class="form-control" name="writer" value='<c:out value= "${board.writer}"/>'
@@ -72,7 +72,7 @@
 			              <label>Update Date</label> <input class="form-control" name="updatedate" value='<fmt:formatDate pattern = "yyyy/MM/dd"  value= "${board.updatedate}"/>'
 			                readonly>
 			            </div>
-			            <!-- <button style="border-color: black;" type="submit" data-oper='modify' class="btn btn-default" >Modify</button> -->
+			            <button style="border-color: black;" type="submit" data-oper='modify' class="btn btn-default" >Modify</button>
 			            <button style="border-color: black;" type="submit" data-oper='remove' class="btn btn-danger" >Remove</button>
 			            <button style="border-color: black;" type="submit" data-oper='list' class="btn btn-info" >List</button>
 			          	</form>
