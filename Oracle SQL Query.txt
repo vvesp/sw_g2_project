@@ -159,3 +159,25 @@ TelNum NUMBER(15) NULL,
 EMail VARCHAR2(20) NULL,
 ADATE DATE NULL
 );
+
+
+
+
+2020.02.19
+★기존 테이블에 default 값 추가
+
+drop table tbl_board;
+
+alter table tbl_board drop primary key;
+
+alter table tbl_reply drop constraint FK_TBL_BOARD_TO_TBL_REPLY_1;
+
+
+CREATE TABLE TBL_BOARD (
+BNO NUMBER(10) NOT NULL,
+Title VARCHAR2(200) NULL,
+Content VARCHAR2(1000) NULL,
+Writer VARCHAR2(20) NULL,
+REGDATE DATE default sysdate NULL,
+UPDATEDATE DATE default sysdate NULL
+);
