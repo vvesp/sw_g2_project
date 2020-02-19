@@ -77,12 +77,10 @@
 			            <button style="border-color: black;" type="submit" data-oper='list' class="btn btn-info" >List</button>
 			          	</form>
 			          	
-			          </div>
-			
+			          </div>			
 			        </div>
 			      </div>
-			    </div>
-            	
+			    </div>            	
               <!-- Board register  -->
               <!-- <form role="form" action="/board/register" method="post">
 					<div class="form-group">
@@ -97,8 +95,7 @@
 					</div>              
 					<button style="border-color: black;" type="submit" class="btn btn-default">Submit Button</button>
 					<button style="border-color: black;" type="reset" class="btn btn-default">Reset Button</button>
-              </form> -->
-              
+              </form> -->              
             </div>
           </div>
           <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
