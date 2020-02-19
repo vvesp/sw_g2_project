@@ -5,7 +5,7 @@
 <mapper namespace="org.zerock.mapper.BoardMapper">
   <select id="getList2" resultType="org.zerock.domain.BoardVO">
   <![CDATA[
-  	SELECT * FROM tbl_board WHERE bno > 0 ORDER BY bno ASC
+  	SELECT * FROM tbl_board WHERE bno > 0
   ]]>
   </select>
   
@@ -20,8 +20,8 @@
   		SELECT seq_board.nextval FROM dual
   	</selectKey>
   
-  	<!-- insert into tbl_board (bno, title, content, writer)
-  	values (seq_board.nextval, #{title}, #{content}, #{writer}) -->
+  	insert into tbl_board (bno, title, content, writer)
+  	values (seq_board.nextval, #{title}, #{content}, #{writer})
   </insert>
   
   <select id="read" resultType="org.zerock.domain.BoardVO">
