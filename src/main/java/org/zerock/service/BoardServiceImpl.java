@@ -21,7 +21,9 @@ public class BoardServiceImpl implements BoardService {
 	public void register(BoardVO board) {
 		log.info("register......."+board);
 		
-		mapper.insertSelectKey(board);
+		/* mapper.insertSelectKey(board); */
+		
+		mapper.insert(board);
 		
 	}
 

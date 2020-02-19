@@ -72,15 +72,17 @@
 			              <label>Update Date</label> <input class="form-control" name="updatedate" value='<fmt:formatDate pattern = "yyyy/MM/dd"  value= "${board.updatedate}"/>'
 			                readonly>
 			            </div>
-			            <!-- <button style="border-color: black;" type="submit" data-oper='modify' class="btn btn-default" >Modify</button> -->
+			            <button style="border-color: black;" type="submit" data-oper='modify' class="btn btn-default" >Modify</button>
 			            <button style="border-color: black;" type="submit" data-oper='remove' class="btn btn-danger" >Remove</button>
 			            <button style="border-color: black;" type="submit" data-oper='list' class="btn btn-info" >List</button>
 			          	</form>
 			          	
-			          </div>			
+			          </div>
+			
 			        </div>
 			      </div>
-			    </div>            	
+			    </div>
+            	
               <!-- Board register  -->
               <!-- <form role="form" action="/board/register" method="post">
 					<div class="form-group">
@@ -95,7 +97,8 @@
 					</div>              
 					<button style="border-color: black;" type="submit" class="btn btn-default">Submit Button</button>
 					<button style="border-color: black;" type="reset" class="btn btn-default">Reset Button</button>
-              </form> -->              
+              </form> -->
+              
             </div>
           </div>
           <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
