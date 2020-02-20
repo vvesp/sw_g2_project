@@ -1,5 +1,10 @@
 package org.zerock.service;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zerock.domain.MemberVO;
@@ -36,13 +41,21 @@ public class MemberServiceImpl implements MemberService{
 
 
 	@Override
-	public void memberupdate(MemberVO member) {
-		log.info("member update............." + member);
+	public boolean memberupdate(MemberVO member) {
+		log.info("modify" + member);
 		
-		mmapper.memberupdate(member);
+		return mmapper.memberupdate(member) == 1;
 		
 	}
-	
+
+
+	@Override
+	public boolean checkpw(String pass) {
+		
+		log.info("password check"+ pass);
+		return false;
+			
+	}
 	
 
 }
