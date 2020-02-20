@@ -39,7 +39,7 @@
   </select> -->
   
   <delete id="memberdrop">
-  	delete from member where mid = #{mid}
+  	delete from member where userid = #{userid}
   </delete>
   
   <update id="memberupdate">
@@ -55,6 +55,11 @@
   	userid #{userid}
   	where mid = #{mid}
   
-  </update>  
+  </update>
+  
+  <select id="checkpw" resultType="java.util.HashMap" parameterType="String">
+  	select count(*) from member
+  	where pass=#{pass}
+  </select>
   
 </mapper>
