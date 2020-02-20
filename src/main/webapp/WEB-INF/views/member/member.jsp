@@ -17,10 +17,6 @@ body {
   background: linear-gradient(to right, #0062E6, #33AEFF);
 }
 
-.col-lg-10 {
-  margin-top: 5.5%;
-}
-
 .card-signin {
   border: 0;
   border-radius: 1rem;
