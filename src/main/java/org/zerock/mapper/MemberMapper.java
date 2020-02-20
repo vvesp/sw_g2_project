@@ -1,5 +1,7 @@
 package org.zerock.mapper;
 
+import java.util.HashMap;
+
 import org.zerock.domain.MemberVO;
 
 public interface MemberMapper {
@@ -10,6 +12,8 @@ public interface MemberMapper {
 	//탈퇴
 	public void memberdrop(MemberVO member);
 	
-	public void memberupdate(MemberVO member);
+	public int memberupdate(MemberVO member);
+	
+	public boolean checkpw(String pass);
 
 }
