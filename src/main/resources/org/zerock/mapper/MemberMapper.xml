@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zerock.mapper.MemberMapper">
+ <!--  <select id="getList" resultType="org.zerock.domain.MemberVO">
+  <![CDATA[
+  	SELECT * FROM member
+  ]]>
+  </select> -->
+  
+  <insert id="memberinsert">
+  	insert into member (mid, mname, snum, adre, telnum, email, adate, pass, userid)
+  	values (seq_mid.nextval, #{mname}, #{snum}, #{adre}, #{telnum}, #{email}, sysdate, #{pass}, #{userid})
+  </insert>
+  
+<!--   insert 2부분 : 둘중 아무거나 사용해도 된다. 
+	<insert id="insertSelectKey">
+		<selectKey keyProperty="bno" order="BEFORE"	resultType="long">
+			select seq_board.nextval from dual
+		</selectKey>
+		insert into tbl_board(bno,title,content,writer)
+		values(#{bno},#{title},#{content},#{writer})
+	</insert>
+   -->
+  <!-- <insert id="insertSelectKey">
+  
+  	<selectKey keyProperty="bno" order="BEFORE" resultType="long">
+  		SELECT seq_mid.nextval FROM dual
+  	</selectKey>
+  	
+  
+  	insert into seq_mid (bno, title, content, writer)
+  	values (seq_board.nextval, #{title}, #{content}, #{writer})
+  </insert>
+  
+  <select id="read" resultType="org.zerock.domain.BoardVO">
+  	SELECT * FROM tbl_board WHERE bno = #{bno}
+  </select> -->
+  
+  <delete id="memberdrop">
+  	delete from member where mid = #{mid}
+  </delete>
+  
+  <update id="memberupdate">
+  	update member
+  	set
+  	mname=#{mname},
+  	snum= #{snum},
+  	adre= #{adre},
+  	telnum= #{telnum},
+  	email= #{email},
+  	adate= sysdate,
+  	pass= #{pass},
+  	userid #{userid}
+  	where mid = #{mid}
+  
+  </update>  
+  
+</mapper>

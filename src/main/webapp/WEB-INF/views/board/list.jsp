@@ -78,7 +78,7 @@
            
 			<button  style="border-color: black;" id='regBtn' type="button" class="btn btn-xs pull-right">Register NewBoard</button>           
            </div>
-          <div class="card-body">
+          <div class="card-bodylist">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable"> 
               <!-- width="100%" cellspacing="0"> -->
