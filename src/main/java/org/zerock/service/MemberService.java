@@ -8,5 +8,7 @@ public interface MemberService {
 	
 	public void memberdrop(MemberVO member);
 
-	public void memberupdate(MemberVO member);
+	public boolean memberupdate(MemberVO member);
+	
+	public boolean checkpw(String pass);
 }
