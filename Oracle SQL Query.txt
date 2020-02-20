@@ -123,3 +123,61 @@ BNO
 2020.02.06 추가
 
 alter table Member add(pass varchar2(20));
+
+
+
+2020.02.07 추가/시퀀스 생성
+create sequence seq_board
+start with 1
+increment by 1
+nocycle;
+
+create sequence seq_mid
+start with 1
+increment by 1
+nocycle;
+
+
+2020.02.13 
+
+
+★기존 테이블 삭제
+
+drop table member;
+
+
+★테이블 생성
+
+CREATE TABLE Member (
+MID NUMBER(10) NOT NULL,
+USERID VARCHAR2(20) NOT NULL,
+PASS VARCHAR2(20) NOT NULL,
+MName VACHAR2(18) NOT NULL,
+SNUM NUMBER(13) NOT NULL,
+Adre VARCHAR2(50) NULL,
+TelNum NUMBER(15) NULL,
+EMail VARCHAR2(20) NULL,
+ADATE DATE NULL
+);
+
+
+
+
+2020.02.19
+★기존 테이블에 default 값 추가
+
+drop table tbl_board;
+
+alter table tbl_board drop primary key;
+
+alter table tbl_reply drop constraint FK_TBL_BOARD_TO_TBL_REPLY_1;
+
+
+CREATE TABLE TBL_BOARD (
+BNO NUMBER(10) NOT NULL,
+Title VARCHAR2(200) NULL,
+Content VARCHAR2(1000) NULL,
+Writer VARCHAR2(20) NULL,
+REGDATE DATE default sysdate NULL,
+UPDATEDATE DATE default sysdate NULL
+);

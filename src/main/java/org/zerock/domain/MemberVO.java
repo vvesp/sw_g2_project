@@ -6,13 +6,14 @@ import lombok.Data;
 
 @Data
 public class MemberVO {
-	private Long mId;
-	private String mName;
-	private Long sNum;
+	private Long mid;
+	private String mname;
+	private Long snum;
 	private String adre;
-	private Long telNum;
-	private String eMail;
-	private Date aDate;
+	private Long telnum;
+	private String email;
+	private Date adate;
 	private String pass;
+	private String userid;
 
 }
