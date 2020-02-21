@@ -23,6 +23,10 @@
     color: #b2b1b1;
     cursor: pointer;
 }
+.time-link{
+	font-size: 20px;
+	color: #fff;
+}
 .logo img{
     width: 30px;
     margin-top: 7px;

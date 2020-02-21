@@ -51,7 +51,7 @@
                 <img src="/resources/Library-of-Alexandria.jpg">
             </div>
         </div>
-        <div>${serverTime}</div>
+        <div class="time-link" >TIME : ${serverTime}</div>
         <div class="quick-links">
             <ul>
                 <li><i class="fa fa-share-alt"></i><p>공유</p></li>

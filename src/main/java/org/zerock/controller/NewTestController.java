@@ -22,7 +22,7 @@ public class NewTestController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/NewTest", method = RequestMethod.GET)
+	@RequestMapping(value = "/newtest", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
