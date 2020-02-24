@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@include file="../includes/header.jsp" %>
+<%@include file="../includes/board-header.jsp" %>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
    
@@ -288,5 +288,4 @@ $(document).ready(function(){
  <script type="text/javascript" src="/resources/js/reply.js"></script>
  <script type="text/javascript" src="/resources/js/BoardGet.js"></script>
 
-     
-<%@include file="../includes/footer.jsp" %>
+<%@include file="../includes/board-footer.jsp" %>

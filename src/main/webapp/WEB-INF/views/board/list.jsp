@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@include file="../includes/header.jsp" %>
+<%@include file="../includes/board-header.jsp" %>
 
 	<!-- JQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
@@ -176,4 +176,4 @@
      <c:out value="${board.title}" /></a>
 	</td>
      <script type="text/javascript" src="/resources/js/BoardSearch.js"></script>
-<%@include file="../includes/footer.jsp" %>
+<%@include file="../includes/board-footer.jsp" %>
