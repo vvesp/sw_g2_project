@@ -36,11 +36,11 @@
   <select id="getListWithPaging" resultType="org.zerock.domain.BookVO">
   	<![CDATA[
   		select
-  			bnum, auther, bname, publisher, pdate, cl
+  			bnum, auther, bname, publisher, pdate, cl, info, bimg
   		from
   			(
   			select /*+INDEX_DESC(book pk_book) */
-  				rownum rn, bnum, auther, bname, publisher, pdate, cl
+  				rownum rn, bnum, auther, bname, publisher, pdate, cl, info, bimg
   			from
   			 	book
   			where 

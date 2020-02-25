@@ -181,3 +181,50 @@ Writer VARCHAR2(20) NULL,
 REGDATE DATE default sysdate NULL,
 UPDATEDATE DATE default sysdate NULL
 );
+
+insert into book(bnum, auther, bname, publisher, pdate, cl,info,bimg) 
+VALUES(1,'코난 도일','셜록홈즈','옥스포드',sysdate,'추리','홈즈의 명추리 백선','0.jpg');
+
+insert into book(bnum, auther, bname, publisher, pdate, cl,info,bimg) 
+VALUES(2,'가와카미 아키히사','배워서 바로 쓰는 14가지 AWS 구축 패턴','한빛미디어','2020-03-01','IT',
+'실무에 유용한 14가지 서비스를효과적으로 구현하는 비법 ','1.jpg');
+
+insert into book(bnum, auther, bname, publisher, pdate, cl,info,bimg) 
+VALUES(3,'진강훈','후니의 쉽게 쓴 시스코 네트워킹','성안당','2018-10-01','IT',
+'네 번째 개정판(4th Edition)은 최신 네트워크 기술과 장비의 변화 내용을 한번에 이해할 수 있도록 확 바뀐 디자인과 일러스트로 한층 더 쉽고 체계적으로 구성',
+'2.jpg');
+
+insert into book(bnum, auther, bname, publisher, pdate, cl,info,bimg) 
+VALUES(4,'양대일','정보 보안 개론','한빛아카데미','2018-01-01','보안','보안의 큰 그림을 그려주는 출발점!이 책은 보안의 전체 그림을 제시',
+'3.jpg');
+
+insert into book(bnum, auther, bname, publisher, pdate, cl,info,bimg) 
+VALUES(5,'Gene','그림으로 배우는 네트워크 원리','영진닷컴',sysdate,'추리',
+'친숙해진 네트워크의 구조는 도대체 어떻게 생겼을까?’라는 호기심을 충족시키고, 네트워크 기술서',
+'4.jpg');
+
+insert into book(bnum, auther, bname, publisher, pdate, cl,info,bimg) 
+VALUES(6,'입실론','나만의 해킹 랩 만들기','위키북스','2020-02-01','보안',
+'언제나 테스트해 볼 수 있는 해킹 공격 실험실 해킹 랩을 구축',
+'5.jpg');
+
+insert into book(bnum, auther, bname, publisher, pdate, cl,info,bimg) 
+VALUES(7,'톰 화이트','하둡 완벽 가이드','한빛미디어','2017-03-10','IT','하둡 개발자의 바이블',
+'6.jpg');
+
+insert into book(bnum, auther, bname, publisher, pdate, cl,info,bimg) 
+VALUES(8,'데이빗 고울리','Programming Insight','인사이트(insight)','2014-02-20','IT',
+'웹 세상을 떠받치고 있는 HTTP에 대한 모든 것',
+'7.jpg');
+
+insert into book(bnum, auther, bname, publisher, pdate, cl,info,bimg) 
+VALUES(9,'연수권,신동혁,박나룡','에이콘 해킹과 보안 시리즈','에이콘출판사','2020-01-17','IT',
+'실제 기업에서 수행하고 있는 정보보호 업무를 기반으로 통제 항목별 실무 사례를 제공',
+'8.jpg');
+
+insert into book(bnum, auther, bname, publisher, pdate, cl,info,bimg) 
+VALUES(10,'김진홍','CPPG 개인정보관리사','위즈플래닛','2019-02-26','IT',
+'개인정보보호에 관한 책',
+'9.jpg');
+
+commit;

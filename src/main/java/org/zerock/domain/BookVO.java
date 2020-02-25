@@ -12,5 +12,8 @@ public class BookVO {
 	private String publisher;
 	private Date pdate;
 	private String cl;
+	private String info;
+	private String bimg;
+	
 
 }

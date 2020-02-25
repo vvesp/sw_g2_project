@@ -34,6 +34,7 @@
 			    <div class="row">
 			      <div class="col-lg-12">
 			        <h1 class="page-header">Book Infomation</h1>
+			        <div class="img"><img alt="img" src='/resources/bookimg/<c:out value= "${book.bimg}"/>' ></div>
 			      </div>
 			    </div>
 			
@@ -61,13 +62,16 @@
 			               readonly>
 			            </div>
 			            <div class="form-group">
+			              <label>내용</label> <textarea class="form-control"  name="info"  readonly><c:out value= "${book.info}"/></textarea>
+			            </div>			            
+			            <div class="form-group">
 			              <label>초판인쇄</label> <input class="form-control" name="pdate" value='<c:out value= "${book.pdate}"/>'
 			               readonly>
 			            </div>
 			            <div class="form-group">
 			              <label>분류</label> <input class="form-control" name="cl" value='<c:out value= "${book.cl}"/>'
 			               readonly>
-			            </div>			            
+			            </div>
 			            <button style="border-color: black;" data-oper="list" class="btn btn-info" onclick="location.href='/book/list' ">Book List</button>
 			          
 			          <form id='operForm' action="/boad/modify" method="get">
