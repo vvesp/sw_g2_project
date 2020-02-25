@@ -20,7 +20,7 @@
 
   <!-- Custom styles for this template-->
   <link href="/resources/css/board-admin.css" rel="stylesheet">
-  
+  <link rel='stylesheet' href='/resources/PageAnimation/style.css'>
   
   
 </head>
