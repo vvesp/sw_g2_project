@@ -6,11 +6,11 @@ import lombok.Data;
 
 @Data
 public class BookVO {
-	private String bNum;
+	private String bnum;
 	private String auther;
-	private String bName;
+	private String bname;
 	private String publisher;
-	private Date pDate;
+	private Date pdate;
 	private String cl;
 
 }
