@@ -12,13 +12,14 @@
 </head>
 <body>
      -->
-     <%@include file="./includes/header.jsp" %>
+     <%@include file="./includes/board-header.jsp" %>
      
     <header>
         <nav>
-            <h3 id="home_logo">SW4-G02-Library</h3>
-           <!--  <img class="glogo" src="/resources/PageAnimation/img/back.png" alt="glogo" /> -->
-
+            <h3 id="home_logo">SW4-G02-Library</h3>            
+            
+	            <time class="glogo"  id="time">12:02:04 PM</time>			     
+		
         </nav>
         <section>
             <div class="hero">
@@ -37,6 +38,7 @@
     integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
     crossorigin="anonymous"></script>   
     <script src="/resources/PageAnimation/app.js"></script>
+    <script src="/resources/time/time.js"></script>
     
 	<!-- jQuery Modal -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js  "></script>
