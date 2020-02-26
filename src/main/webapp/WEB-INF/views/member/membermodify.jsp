@@ -171,12 +171,12 @@ body {
               <hr>
               
               <div class="form-label-group">
-                <input type="text" id="inputName" name="mname" value='<c:out value="${member.mname }"/>' class="form-control" placeholder="Name" required>
+                <input type="text" id="inputName" name="mname" value='<c:out value="${member.mname }"/>' class="form-control" placeholder="Name" readonly>
                 <label for="inputName">Name</label>
               </div>
 
               <div class="form-label-group">
-                <input type="text" id="inputSNum" name="snum" value='<c:out value="${member.snum }"/>' class="form-control" placeholder="Social Security Number" required>
+                <input type="text" id="inputSNum" name="snum" value='<c:out value="${member.snum }"/>' class="form-control" placeholder="Social Security Number" readonly>
                 <label for="inputSNum">Social Security Number</label>
               </div>
               
@@ -195,14 +195,34 @@ body {
                 <label for="inputAdre">Address</label>
               </div>
 
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" data-oper="register">Register</button>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" data-oper="memberupdate">Submit</button>
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="reset" data-oper="reset">Cancel</button>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" data-oper="memberdrop">Unregister</button>
+              
             </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+  
+<!--   <script>
+  $(document).ready(function(){
+		$("button").on("click", function(e){
+			var operation=$(this).data("oper");
+			console.log(operation);
+			if(operation=='unregister'){
+				formObj.attr("action", "/member/memberdrop");
+			}else if(operation=='register'){
+			 	formObj.attr("action", "/member/memberupdate").attr("method", "get");
+				/* self.location="/board/list";
+			return; */
+				
+			}
+			formObj.submit();
+		});
+	}); 
+  </script>
+ -->
 </body>
 </html>

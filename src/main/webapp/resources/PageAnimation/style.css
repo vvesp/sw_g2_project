@@ -61,6 +61,7 @@ section {
     transform: translate(-20%, -70%);
     color: white;
     z-index: 3;
+    font-family: 'Playfair Display';
 }
 
 .hero::after{

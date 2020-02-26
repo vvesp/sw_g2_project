@@ -128,14 +128,14 @@
           <div class="row">
             <div class="col-md-9 col-lg-8 mx-auto">
               <h3 class="login-heading mb-4">Login</h3>
-              <form>
+              <form method="post">
                 <div class="form-label-group">
-                  <input type="text" id="inputUserid" class="form-control" placeholder="ID" required autofocus>
+                  <input type="text" id="inputUserid" name="userid" class="form-control" placeholder="ID" required autofocus>
                   <label for="inputUserid">ID</label>
                 </div>
 
                 <div class="form-label-group">
-                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                  <input type="password" id="inputPassword" name="pass" class="form-control" placeholder="Password" required>
                   <label for="inputPassword">Password</label>
                 </div>
 
@@ -156,30 +156,10 @@
 </div>
 
 
+<script>
 
+</script>
 
-  <script>
-  
-  
-  
-  
-  $(".btn-success").on("click", function(e){
-    
-    e.preventDefault();
-    $("form").submit();
-    
-  });
-  
-  </script>
-  
-<c:if test="${param.logout != null}">
-      <script>
-      $(document).ready(function(){
-      	alert("로그아웃하였습니다.");
-      });
-      </script>
-</c:if>  
 
 </body>
 
-</html>

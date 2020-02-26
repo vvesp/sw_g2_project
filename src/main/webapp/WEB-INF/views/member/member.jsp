@@ -6,8 +6,7 @@
 
 <!-- CSS 적용 부분 -->
 <style>
-<!--
- :root {
+:root {
   --input-padding-x: 1.5rem;
   --input-padding-y: .75rem;
 }
@@ -125,7 +124,7 @@ body {
   color: white;
   background-color: #3b5998;
 }
--->
+
 </style>
 
 <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->

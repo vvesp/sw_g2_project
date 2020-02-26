@@ -32,19 +32,18 @@
   
   	insert into seq_mid (bno, title, content, writer)
   	values (seq_board.nextval, #{title}, #{content}, #{writer})
-  </insert>
+  </insert> -->
   
-  <select id="read" resultType="org.zerock.domain.BoardVO">
-  	SELECT * FROM tbl_board WHERE bno = #{bno}
-  </select> -->
+  <select id="login" resultType="org.zerock.domain.MemberVO">
+  	select * from member where userid = #{userid} and pass=#{pass}
+  </select>
   
   <delete id="memberdrop">
   	delete from member where userid = #{userid}
   </delete>
   
-  <update id="memberupdate">
-  	update member
-  	set
+  <update id="memberupdate" parameterType="java.util.HashMap">
+  	update member set
   	mname=#{mname},
   	snum= #{snum},
   	adre= #{adre},
@@ -52,12 +51,11 @@
   	email= #{email},
   	adate= sysdate,
   	pass= #{pass},
-  	userid #{userid}
-  	where mid = #{mid}
+  	where userid = #{userid}
   
   </update>
   
-  <select id="checkpw" resultType="java.util.HashMap" parameterType="String">
+  <select id="checkpw">
   	select count(*) from member
   	where pass=#{pass}
   </select>

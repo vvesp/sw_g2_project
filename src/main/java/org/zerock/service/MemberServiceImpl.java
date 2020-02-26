@@ -1,61 +1,66 @@
 package org.zerock.service;
 
-import java.util.HashMap;
-import java.util.Map;
+import javax.servlet.http.HttpSession;
 
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.domain.MemberVO;
 import org.zerock.mapper.MemberMapper;
 
-import lombok.AllArgsConstructor;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 
 @Log4j
 @Service
-@AllArgsConstructor
 public class MemberServiceImpl implements MemberService{
 	@Setter(onMethod_ = @Autowired)
 	private MemberMapper mmapper;
+	@Setter(onMethod_ = @Autowired)
+	private HttpSession session;
 	
 
 	@Override
 	public void memberinsert(MemberVO member) {
 		log.info("memberinsert............." + member);
-		
 		mmapper.memberinsert(member);
-		
 	}
-
 
 	@Override
-	public void memberdrop(MemberVO member) {
-		log.info("member delete............." + member);
-		
-		mmapper.memberdrop(member);
-		
+	public boolean memberdrop(String userid) {
+		log.info("member delete............." + userid);
+		mmapper.memberdrop(userid);
+		return mmapper.memberdrop(userid) != null;
 	}
-
 
 	@Override
 	public boolean memberupdate(MemberVO member) {
 		log.info("modify" + member);
-		
 		return mmapper.memberupdate(member) == 1;
-		
+	}
+
+	@Override
+	public boolean checkpw(String pass) {
+		log.info("password check"+ pass);
+		return false;
 	}
 
 
 	@Override
-	public boolean checkpw(String pass) {
+	public String login(String userid, String pass, RedirectAttributes rttr) {
+		System.out.println("userid service"+userid);
+		System.out.println("pass service"+pass);
+		MemberVO vo = new MemberVO();
+		vo.setUserid(userid);
+		vo.setPass(pass);
+		MemberVO member = mmapper.login(vo);
+			if(member==null) {
+				return "redirect:/login/customLogin";
+			}else {
+				session.setAttribute("vo", member);
+			return "home";
+		}
 		
-		log.info("password check"+ pass);
-		return false;
-			
 	}
-	
 
 }
