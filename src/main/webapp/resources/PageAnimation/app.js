@@ -1,4 +1,5 @@
 const hero = document.querySelector('.hero');
+//const navbar = document.querySelector('.navbar');
 const slider = document.querySelector('.slider');
 const home_logo = document.querySelector('#home_logo');
 const glogo = document.querySelector('.glogo');
