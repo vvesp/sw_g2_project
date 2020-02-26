@@ -45,9 +45,10 @@
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable"> 
               <!-- width="100%" cellspacing="0"> -->
-                <thead>
+                <thead class="title-list">
                 	<tr>
                 		<th>#번호</th>
+                		<th>표지</th>
                 		<th>제목</th>
                 		<th>작가</th>
                 		<th>출판사</th>
@@ -58,14 +59,16 @@
                 
                 <c:forEach items="${list}" var="book">
                 	
-                	<tr>
-                		<td><c:out value="${book.bnum}"  /></td>
-                		<td><a href='/book/get?bnum=<c:out value="${book.bnum}"  />'>
+                	<tr class="book-list">
+                		<td class="bookvalue"><c:out value="${book.bnum}"  /></td>
+                		<td class="bookvalue"><a href='/book/get?bnum=<c:out value="${book.bnum}"  />'>
+                		<img class="small_img" alt="img" src='/resources/bookimg/<c:out value= "${book.bimg}"/>' ></a></td>
+                		<td class="bookvalue"><a href='/book/get?bnum=<c:out value="${book.bnum}"  />'>
                 		<c:out value="${book.bname}"  /></a></td>
-                		<td><c:out value="${book.auther}"  /></td>
-                		<td><c:out value="${book.publisher}"  /></td>
-                		<td><fmt:formatDate pattern="yyyy-MM-dd" value="${book.pdate}" /></td>
-                		<td><c:out value="${book.cl}"  /></td>
+                		<td class="bookvalue"><c:out value="${book.auther}"  /></td>
+                		<td class="bookvalue"><c:out value="${book.publisher}"  /></td>
+                		<td class="bookvalue"><fmt:formatDate pattern="yyyy-MM-dd" value="${book.pdate}" /></td>
+                		<td class="bookvalue"><c:out value="${book.cl}"  /></td>
                 	</tr>
                 </c:forEach>
               </table>

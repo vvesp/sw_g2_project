@@ -58,6 +58,7 @@
       </li>
     </ul>
  -->
+ 
     <div id="content-wrapper">
 
       <div class="container-fluid">
@@ -82,7 +83,7 @@
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable"> 
               <!-- width="100%" cellspacing="0"> -->
-                <thead>
+                <thead class="title-board">
                 	<tr>
                 		<th>#번호</th>
                 		<th>제목</th>
@@ -94,13 +95,13 @@
                 
                 <c:forEach items="${list}" var="board">
                 	
-                	<tr>
-                		<td><c:out value="${board.bno}"  /></td>
-                		<td><a href='/board/get?bno=<c:out value="${board.bno}"  />'>
+                	<tr class="board-list">
+                		<td class="boardvalue"><c:out value="${board.bno}"  /></td>
+                		<td class="boardvalue"><a href='/board/get?bno=<c:out value="${board.bno}"  />'>
                 		<c:out value="${board.title}"  /></a></td>
-                		<td><c:out value="${board.writer}"  /></td>
-                		<td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.regdate}" /></td>
-                		<td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.updatedate}"  /></td>
+                		<td class="boardvalue"><c:out value="${board.writer}"  /></td>
+                		<td class="boardvalue"><fmt:formatDate pattern="yyyy-MM-dd" value="${board.regdate}" /></td>
+                		<td class="boardvalue"><fmt:formatDate pattern="yyyy-MM-dd" value="${board.updatedate}"  /></td>
                 	</tr>
                 </c:forEach>
               </table>

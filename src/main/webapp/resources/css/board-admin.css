@@ -484,6 +484,36 @@ mark,
 .blockquote-footer::before {
   content: "\2014\00A0";
 }
+.title-list{
+	text-align: center;
+}
+.book-list{
+	text-align: center;		
+}
+.bookvalue{  
+   line-height: 100px;  
+   text-align: center;
+}
+.title-board{
+	text-align: center;
+}
+.board-list{
+	text-align: center;		
+}
+.boardvalue{  
+   line-height: 18px;  
+   text-align: center;
+}
+.img-book{
+	
+	width: 210px;
+	height: 250px;
+}
+.small_img{
+	width: 50px;
+	height: 70px;
+}
+
 
 .img-fluid {
   max-width: 100%;

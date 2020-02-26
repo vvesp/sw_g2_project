@@ -34,7 +34,7 @@
 			    <div class="row">
 			      <div class="col-lg-12">
 			        <h1 class="page-header">Book Infomation</h1>
-			        <div class="img"><img alt="img" src='/resources/bookimg/<c:out value= "${book.bimg}"/>' ></div>
+			        <div class="img"><img class="img-book" alt="img" src='/resources/bookimg/<c:out value= "${book.bimg}"/>' ></div>
 			      </div>
 			    </div>
 			
