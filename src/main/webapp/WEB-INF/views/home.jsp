@@ -17,9 +17,9 @@
     <header>
         <nav>
             <h3 id="home_logo">SW4-G02-Library</h3>            
-            
-	            <time class="glogo"  id="time">12:02:04 PM</time>			     
-		
+            	<h2 class="glogo" >현재 시각 : 
+	            <time class="#"  id="time">12:02:04 PM</time>			     
+				</h2>
         </nav>
         <section>
             <div class="hero">

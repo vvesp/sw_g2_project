@@ -1,0 +1,8 @@
+#time {
+    font-size: 60px;
+}
+@media(max-width: 700px){
+    #time{
+        font-size: 60px;
+    }
+}
