@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@include file="../includes/header.jsp" %>
+<%@include file="../includes/board-header.jsp" %>
 
 <style>
 :root {
@@ -145,7 +145,8 @@
                 </div>
                 <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
                 <div class="text-center">
-                  <a class="small" href="#">Forgot password?</a></div>
+                  <a class="small" href="#">Forgot password?</a><a style="color: steelblue;"> /</a>
+                  <a class="small" href="../member/member">join in</a></div>
               </form>
             </div>
           </div>
@@ -155,10 +156,6 @@
   </div>
 </div>
 
-
-<script>
-
-</script>
 
 
 </body>

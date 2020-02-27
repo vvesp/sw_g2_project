@@ -1,6 +1,7 @@
 package org.zerock.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,17 +31,12 @@ public class MemberController {
 	
 	//Service에서 가져온 register(MemberVO member);
 	@PostMapping("/member")
-	public String memberinsert(MemberVO member, RedirectAttributes rttr) {
+	public String memberinsert(MemberVO member, RedirectAttributes rttr, Model model) {
 		log.info(member);
 		mservice.memberinsert(member);
 		rttr.addFlashAttribute("result", member.getMid());
-		return "redirect:/member/member";
+		System.out.println("memberinsert complete");
+		return "redirect:/";
 	}
-	
-	@GetMapping("/mypage")
-	public void mypage(String pass) {
-
-	}
-	
 	
 }

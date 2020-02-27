@@ -11,8 +11,6 @@ public interface MemberService {
 
 	public boolean memberupdate(MemberVO member);
 	
-	public boolean checkpw(String pass);
-
 	public String login(String userid, String pass, RedirectAttributes rttr);
 	
 }

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="../includes/header.jsp" %>
+<%@include file="../includes/board-header.jsp" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
@@ -127,6 +127,27 @@ body {
 
 </style>
 
+<!-- Controller와 충돌 -->
+<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+$(function(){
+  	/* $(document).ready(function(){ */
+  		var mform=$("form");
+  		$("button").on("click", function(e){
+  			e.preventDefault();
+			var operation=$(this).data("oper");
+			console.log(operation);
+			if(operation=='register'){
+				alert("회원가입이 완료되었습니다");
+				mform.attr("action", "/");
+			}else{
+				alert("입력정보를 확인하세요");
+			}
+  		});
+  	});
+</script> -->
+
 <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
 
   <div class="container">
@@ -138,7 +159,7 @@ body {
           </div>
           <div class="card-body">
             <h5 class="card-title text-center">Register</h5>
-            <form class="form-signin" method="post">
+            <form class="form-signin" method="post" name="mform">
               <div class="form-label-group">
                 <input type="text" id="inputID" name="userid" value='<c:out value="${member.userid }"/>' class="form-control" placeholder="ID" required autofocus>
                 <label for="inputID">ID</label>
@@ -178,7 +199,7 @@ body {
 
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" data-oper="register">Register</button>
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="reset" data-oper="reset">Cancel</button>
-              <a class="d-block text-center mt-2 small" href="#">Sign In</a>
+              <a class="d-block text-center mt-2 small" href="../login/customLogin">Sign In</a>
             </form>
           </div>
         </div>
@@ -186,4 +207,5 @@ body {
     </div>
   </div>
   
- 
+  
+  

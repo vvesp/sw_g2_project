@@ -40,24 +40,19 @@ public class MemberServiceImpl implements MemberService{
 	}
 
 	@Override
-	public boolean checkpw(String pass) {
-		log.info("password check"+ pass);
-		return false;
-	}
-
-
-	@Override
 	public String login(String userid, String pass, RedirectAttributes rttr) {
-		System.out.println("userid service"+userid);
-		System.out.println("pass service"+pass);
+//		System.out.println("userid service : "+userid);
+//		System.out.println("pass service : "+pass);
 		MemberVO vo = new MemberVO();
 		vo.setUserid(userid);
 		vo.setPass(pass);
 		MemberVO member = mmapper.login(vo);
 			if(member==null) {
+				log.info("login fail");
 				return "redirect:/login/customLogin";
 			}else {
 				session.setAttribute("vo", member);
+				log.info("login successed");
 			return "home";
 		}
 		

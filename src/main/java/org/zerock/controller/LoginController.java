@@ -2,6 +2,8 @@ package org.zerock.controller;
 
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,14 +40,17 @@ public class LoginController {
 	public String login(@RequestParam Map<String, String> paraMap, RedirectAttributes rttr) {
 		String userid = paraMap.get("userid");
 		String pass = paraMap.get("pass");
-		System.out.println("userid"+userid+"pass"+pass);
+//		System.out.println("userid : "+userid+"pass : "+pass);
 		return mservice.login(userid, pass, rttr);
 		
 	}
 	
-	@GetMapping("/customLogout")
-	public void logoutGET() {
-		log.info("custom logout");
+	@RequestMapping("/logout")
+	public String logout(HttpSession session) {
+		log.info("logout start");
+		session.removeAttribute("userid");
+		log.info("logout successed");
+		return "redirect:/login/customLogin";
 	}
 	
 
