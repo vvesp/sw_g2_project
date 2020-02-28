@@ -12,10 +12,10 @@
 </head>
 <body>
      -->
-     <%@include file="./includes/board-header.jsp" %>
+     <%@include file="./includes/navibar.jsp" %>
      
     <header>
-        <nav>
+        <nav id="homenav">
             <h3 id="home_logo">SW4-G02-Library</h3>            
             	<h2 class="glogo" >현재 시각 : 
 	            <time class="#"  id="time">12:02:04 PM</time>			     
