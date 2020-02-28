@@ -21,15 +21,17 @@
   <!-- Page level plugin CSS-->
   <link href="/resources/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
  
-  <link href="/resources/css/board-admin.css" rel="stylesheet">
+  <link href="/resources/css/home-admin.css" rel="stylesheet">
   <link href='/resources/PageAnimation/style.css' rel='stylesheet'>
   
 </head>
 <body>
-	<nav id="navi" class="navbar navbar-expand navbar-dark static-top">
-		<div class="logo">
-			<h4>SW4-G02-PL</h4>
-		</div>
+	<nav id="navi" class="navbar navbar-expand navbar-dark static-top">	
+		
+		<div class="logo">			
+			<a href=" "><img class="logo2" alt="s-logo" src="/resources/Logo1.png"></a>				
+			<h3 class="logo3">SW4-G02-PL</h3>
+		</div>		
 		<ul class="nav-links">
 			<li class="nav-item dropdown no-arrow">
         		<a class="dropdown-toggle" href="/member/member" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,6 +44,9 @@
       		</li>
 			<li>
 				<a href=" ">Home</a>
+			</li>						
+			<li>
+				<a href="/board/list">Board</a>
 			</li>						
 			<li>
 				<a href="/book/list">BookInfo</a>

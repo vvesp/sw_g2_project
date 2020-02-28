@@ -12,6 +12,17 @@
 	text-transform: 5px;
 	letter-spacing: 5px;
 	font-size: 20px;
+	width: 500px;	
+}
+
+.logo2{
+	float: left;
+	width: 60px;
+	padding: 5px;
+}
+.logo3{
+	
+	margin-top: 15px;
 }
 
 .nav-links{
